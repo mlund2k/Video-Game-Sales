@@ -48,20 +48,26 @@ release_date = NULLIF(@v12,'');
 -- NOW the table is finally imported and I can query it, this entire process is automated in most other SQL programs fortunately
 
 -- First I want to create a table to save my query to that can be used in a visualization program.
-CREATE TABLE IF NOT EXISTS games_analysis LIKE games
+CREATE TABLE IF NOT EXISTS games_analysis LIKE games;
+ALTER TABLE games_analysis DROP img;
+ALTER TABLE games_analysis ADD release_year DOUBLE;
+
+	
+INSERT INTO games_analysis
 SELECT title,
+	console,
 	genre,
 	publisher,
     ROUND(AVG(critic_score),1) AS avg_ratings,
+    ROUND(SUM(total_sales),2) AS total_sales,
     ROUND(SUM(na_sales),2) AS na_sales,
-    ROUND(SUM(pal_sales),2) AS pal_sales,
     ROUND(SUM(jp_sales),2) AS jp_sales,
+    ROUND(SUM(pal_sales),2) AS pal_sales,
     ROUND(SUM(other_sales),2) AS other_sales,
-	ROUND(SUM(total_sales),2) AS total_sales,
     MIN(release_date) AS release_date,
     LEFT(MIN(release_date), 4) AS release_year
 FROM games
-GROUP BY title, genre, publisher
+GROUP BY title, console, genre, publisher
 HAVING total_sales IS NOT NULL AND total_sales > 0
 ORDER BY total_sales DESC;
 
