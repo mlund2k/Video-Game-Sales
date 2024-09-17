@@ -25,5 +25,5 @@ A full outlined step by step documentation of the data cleaning process with SQL
 [Resulting Query Table](https://github.com/mlund2k/Video-Game-Sales/blob/main/query.csv)
 
 Part 2 of the analysis takes place within Power BI building a dashboard and performing further data cleaning. This can be viewed in the following links:
-- [Power BI Dashboard]() (pdf format)
-- [Power BI Project File]() This requires Power BI Desktop to run, alternatively check out the non-interactive preview above.
+- [Power BI Dashboard](https://github.com/mlund2k/Video-Game-Sales/blob/main/dashboard.pdf) (pdf format)
+- [Power BI Project File](https://github.com/mlund2k/Video-Game-Sales/blob/main/proj.pbix) This requires Power BI Desktop to run, alternatively check out the non-interactive preview above.
