@@ -11,6 +11,8 @@ and I am to examine past video game sales to determine what platforms and genres
 
 ## Process
 
+![image](https://github.com/user-attachments/assets/4c5b1c1b-6419-43bc-a917-01664651fbf7)
+
 I first downloaded the [Dataset](https://www.kaggle.com/datasets/asaniczka/video-game-sales-2024) through Kaggle, then opened it in Excel for some initial cleaning.
 
 - Raw Data File: [vgames.csv](https://github.com/mlund2k/Video-Game-Sales/blob/main/vgames.csv)
